@@ -1,0 +1,78 @@
+/* static/styles.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    margin: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+.header img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    color: #007bff;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="number"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Garante que o padding não alargue o input */
+}
+
+button[type="submit"], .button-new-budget {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 25px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    text-decoration: none; /* Para o link */
+}
+
+button[type="submit"]:hover, .button-new-budget:hover {
+    background-color: #218838;
+}
+
+hr {
+    border: 0;
+    border-top: 2px solid #007bff;
+    margin: 30px 0;
+}
+
+.data-hoje {
+    text-align: right;
+    font-style: italic;
+    color: #666;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Orçamento Final - {{ nome }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Orçamento Gerado</h1>
+        
+        <div class="data-hoje">Data: {{ "" | today }}</div>
+
+        <h2>Detalhes do Produto: {{ nome }}</h2>
+        <p><strong>Descrição:</strong> {{ descricao }}</p>
+
+        {% if caminho_foto %}
+            <h3>Foto Anexada:</h3>
+            <img src="/{{ caminho_foto }}" alt="Foto do Produto/Instalação" style="max-width: 400px; height: auto; border: 1px solid #ddd; display: block; margin-bottom: 20px;">
+        {% else %}
+            <p>Nenhuma foto foi anexada a este orçamento.</p>
+        {% endif %}
+        
+        <h2>Cálculo de Custo</h2>
+        <p>Comprimento (mm): <strong>{{ comprimento_mm }} mm</strong></p>
+        <p>Comprimento (metros): <strong>{{ comprimento_m }} m</strong></p>
+        <p>Valor por Metro (R$/m): <strong>R$ {{ valor_m }}</strong></p>
+        
+        <hr>
+        
+        <h3>VALOR TOTAL DO ORÇAMENTO: 
+            {% if valor_total.startswith("Erro") %}
+                <span style="color: red;">{{ valor_total }}</span>
+            {% else %}
+                <span style="color: green; font-size: 1.5em;">R$ {{ valor_total }}</span>
+            {% endif %}
+        </h3>
+        
+        <a href="/" class="button-new-budget">Gerar Novo Orçamento</a>
+    </div>
+</body>
+</html>
