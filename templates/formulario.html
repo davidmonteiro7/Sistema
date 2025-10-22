@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <title>Gerador de Orçamento - Milímetros</title>
+    <title>Sistema de Orçamento</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
+
 <body>
     <div class="container">
        <div class="header">
@@ -14,15 +16,15 @@
         <form method="POST" action="/" enctype="multipart/form-data">
             
             <div class="section">
-                <h2>Dados do Produto/Instalação</h2>
+                <h2>Dados do Produto</h2>
                 <label for="nome_produto">Nome do Produto:</label>
                 <input type="text" id="nome_produto" name="nome_produto" required>
                 
-                <label for="descricao">Descrição para o Cliente (detalhes):</label>
+                <label for="descricao">Descrição (detalhes):</label>
                 <textarea id="descricao" name="descricao" rows="4" required></textarea>
 
-                <label for="foto">Foto para Detalhamento (Opcional):</label>
-                <input type="file" id="foto" name="foto" accept="image/*">
+                <label for="imagem">Imagem:</label>
+                <input type="file" id="imagem" name="imagem" accept="image/*">
             </div>
 
             <div class="section">
